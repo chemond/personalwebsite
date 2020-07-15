@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Navigation from './Navigation';
 import ToastmastersImg from './toastmastersimg.png'
 import ColbyAndEmily from './colbyandemily.png'
+import TestStore from './test-store.png'
 import Footer from './Footer'
 
 class Projects extends Component {
@@ -12,7 +13,15 @@ class Projects extends Component {
       <div className="">
         <div className="row justify-content-center">
           <div className="card">
-            <img src={ColbyAndEmily} alt=""/>
+            <img src={TestStore} alt="ch-test-store.netlify.app"/>
+            <a href="http://ch-test-store.netlify.com" target="_blank" rel="noopener noreferrer" className="stretched-link">
+              <span className="project-tile-text">Test Store</span>
+            </a>
+            <p>An HTML and CSS website utilizing Bootsrap for responsive behavior. SnipCart for e-commerce</p>
+            <p>A test website I created to test out and work with SnipCart, which is an extremely simple way to implement e-commerce into a static website.</p>
+          </div>
+          <div className="card">
+            <img src={ColbyAndEmily} alt="colbyandemily.com"/>
             <a href="http://colbyandemily.com" target="_blank" rel="noopener noreferrer" className="stretched-link">
               <span className="project-tile-text">The Hemonds</span>
             </a>
@@ -20,7 +29,7 @@ class Projects extends Component {
             <p>A personal website that showcases the couples photos from their engagement, wedding, and travels.</p>
           </div>
           <div className="card">
-            <img src={ToastmastersImg} alt=""/>
+            <img src={ToastmastersImg} alt="cherrycapitaltm.org"/>
             <a href="http://cherrycapitaltm.org" target="_blank" rel="noopener noreferrer" className="stretched-link">
               <span className="project-tile-text">Cherry Capital Toastmasters</span>
             </a>
