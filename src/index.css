@@ -1,13 +1,382 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+html {
+  text-align: center;
+  min-height: 100vh;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  font-family: "Overpass", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #212531;
+  color: #ddd;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+  color: orange;
 }
+
+h1 {
+  font-family: "Permanent Marker";
+  margin: 20px;
+}
+
+.navbar-toggler-icon {}
+
+/* Landing */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.background {
+  background-color: #212531;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo {
+  padding: .5em;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 5.5vw;
+  -webkit-animation: fade-in 7s;
+  -moz-animation: fade-in 7s;
+  -o-animation: fade-in 7s;
+  animation: fade-in 7s;
+}
+
+@media only screen and (max-width: 768px) {
+  #logo {
+    font-size: 8vw;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #logo {
+    font-size: 10vw;
+  }
+}
+
+.typewriter h2 {
+  width: 200px;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em;
+  /* Adjust as needed */
+  animation:
+    typing 1s steps(11, start),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 25%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+
+  25% {
+    border-color: orange;
+  }
+}
+
+#headshot-img {
+  width: 70%;
+  height: auto;
+  align-self: center;
+  border-radius: 5%;
+  margin-top: 20px;
+}
+
+.content {
+  margin-top: 5em
+}
+
+/* Landing End */
+/* Content */
+.page-title {
+  font-size: 4em;
+  padding: .5em;
+  font-family: 'Permanent Marker', sans-serif;
+}
+
+.blog-title {
+  font-family: 'Permanent Marker', sans-serif;
+  font-size: 6vw;
+}
+
+.blog-text {
+  padding-top: 20px;
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: #FCCB5A;
+}
+
+a:hover {
+  color: #666;
+}
+
+.blog-image {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+/* Navigation */
+.navbar {
+  padding: 0;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.link {
+  color: #ddd;
+  padding: 15px 20px;
+  vertical-align: middle;
+}
+
+.link:hover {
+  background-color: #ddd;
+  color: #000;
+  text-decoration: none;
+}
+
+.white-line {
+  background-color: #ddd;
+  height: 3px;
+}
+
+#nav-logo {
+  display: flex;
+  align-self: flex-start;
+  width: auto;
+  height: 4rem;
+  margin-left: 10px;
+}
+
+#nav-logo:hover {
+  transform: scale(1.5);
+  /* background-color: #ddd; */
+}
+
+/* About */
+.text-container {
+  margin: 0% 15%;
+}
+
+.logo {
+  margin-top: 20px;
+}
+
+#img-linkedin {
+  width: 10em;
+}
+
+#img-linkedin:hover {
+  transform: scale(1.5);
+}
+
+#img-github {
+  width: 10em;
+}
+
+#img-github:hover {
+  transform: scale(1.5);
+}
+
+#img-sap {
+  width: 10em;
+}
+
+#img-sap:hover {
+  transform: scale(1.5);
+}
+
+#img-freecodecamp {
+  width: 10em;
+}
+
+#img-freecodecamp:hover {
+  transform: scale(1.5);
+}
+
+#img-react {
+  width: 10em;
+}
+
+#img-react:hover {
+  transform: scale(1.5);
+}
+
+#img-node {
+  width: 10em;
+}
+
+#img-node:hover {
+  transform: scale(1.5);
+}
+
+.logo-container {
+  padding: 20px;
+  ;
+}
+
+/* Blog */
+#img-buttercms {
+  width: 10em;
+}
+
+#img-buttercms:hover {
+  transform: scale(1.5);
+}
+
+.blog-post-preview {
+  padding: 20px;
+}
+
+.blog-link a {
+  color: orange;
+  font-size: 2em;
+  font-family: 'Permanent Marker'
+}
+
+.blog-link a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* End of Blog */
+/* Contact Form */
+.contact-form {
+  display: flex;
+  justify-content: center;
+}
+
+input, textarea {
+  border: solid 2px grey;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form-group {
+  margin: 10px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* End of Contact Form *?
+
+/* Projects */
+.card {
+  width: 400px;
+  height: auto;
+  border: none;
+  text-align: center;
+  background-color: inherit;
+  margin: 20px;
+}
+
+.card a {
+  font-family: 'Permanent Marker';
+  align-items: center;
+  color: orange;
+  font-size: 2em;
+}
+
+.card a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* End of Projects */
+/* Footer */
+.page-footer {
+  margin-top: 150px;
+  background-color: #2e2e2e;
+}
+
+.footer-copyright {
+  background-color: #1b1b1b;
+}
+
+.subscribe-form {
+  margin-bottom: 20px
+}
+
+.logo-link {
+  font-family: "Permanent Marker";
+  margin-left: 5px;
+}
+
+/* End of Footer */
