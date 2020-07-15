@@ -27,7 +27,7 @@ class Projects extends Component {
               <span className="project-tile-text">Upper Valley Flag</span>
             </a>
             <p>An HTML and CSS website utilizing Bootsrap for responsive behavior.</p>
-            <p>Created to boost awareness of the community through the unity of a flag.</p>
+            <p>Created to boost unity of the community through the symbol of a flag.</p>
           </div>
           <div className="card">
             <img src={ColbyAndEmily} alt="colbyandemily.com"/>
