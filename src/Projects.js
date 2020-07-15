@@ -3,6 +3,7 @@ import Navigation from './Navigation';
 import ToastmastersImg from './toastmastersimg.png'
 import ColbyAndEmily from './colbyandemily.png'
 import TestStore from './test-store.png'
+import UVFlag from './uvflag.png'
 import Footer from './Footer'
 
 class Projects extends Component {
@@ -19,6 +20,14 @@ class Projects extends Component {
             </a>
             <p>An HTML and CSS website utilizing Bootsrap for responsive behavior. SnipCart for e-commerce</p>
             <p>A test website I created to test out and work with SnipCart, which is an extremely simple way to implement e-commerce into a static website.</p>
+          </div>
+          <div className="card">
+            <img src={UVFlag} alt="uv-flag.netlify.app"/>
+            <a href="http://uv-flag.netlify.com" target="_blank" rel="noopener noreferrer" className="stretched-link">
+              <span className="project-tile-text">Upper Valley Flag</span>
+            </a>
+            <p>An HTML and CSS website utilizing Bootsrap for responsive behavior.</p>
+            <p>Created to boost awareness of the community through the unity of a flag.</p>
           </div>
           <div className="card">
             <img src={ColbyAndEmily} alt="colbyandemily.com"/>
