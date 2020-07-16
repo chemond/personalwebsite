@@ -2,22 +2,29 @@ import React, {Component} from 'react';
 /* Import Components */
 import Input from './components/Input/Input';
 import TextArea from './components/TextArea/TextArea';
-import Button from './components/Button/Button'
+import Button from './components/Button/Button';
+
+const encode = (data) => {
+  return Object.keys(data).map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&");
+}
 
 class ContactForm extends Component {
 
   constructor(props) {
     super(props);
-    this.submitForm = this.submitForm.bind(this);
     this.state = {
-      status: ""
+      name: "",
+      email: "",
+      message: ""
     };
   }
 
   render() {
     const {status} = this.state;
     return (<div className="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 ml-auto mr-auto">
-      <form onSubmit={this.submitForm} action="https://formspree.io/mpzyydql" method="POST">
+      <form name="contact" onSubmit={this.handleSubmit} method="POST" netlify-honeypot="bot-field" data-netlify="true">
+        <input type="hidden" name="bot-field"/>
+        <input type="hidden" name="form-name" value="contact"/>
         <label for="name" className="form-label" style={{
             paddingTop: 1 + "em"
           }}>Name</label>
@@ -43,6 +50,22 @@ class ContactForm extends Component {
 
     </div>);
   }
+
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: encode({
+        "form-name": "contact",
+        ...this.state
+      })
+    }).catch(error => alert(error));
+
+    e.preventDefault();
+  };
+
   submitForm(ev) {
     ev.preventDefault();
     const form = ev.target;
