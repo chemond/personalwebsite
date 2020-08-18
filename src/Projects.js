@@ -4,6 +4,7 @@ import ToastmastersImg from './toastmastersimg.png'
 import ColbyAndEmily from './colbyandemily.png'
 import TestStore from './test-store.png'
 import UVFlag from './uvflag.png'
+import APIPlayground from './api-playground.png'
 import Footer from './Footer'
 
 class Projects extends Component {
@@ -13,6 +14,14 @@ class Projects extends Component {
       <h1 className="text-center">Projects</h1>
       <div className="">
         <div className="row justify-content-center">
+        <div className="card">
+            <img src={APIPlayground} alt="api-playground.netlify.app"/>
+            <a href="http://api-playground.netlify.com" target="_blank" rel="noopener noreferrer" className="stretched-link">
+              <span className="project-tile-text">API Playground</span>
+            </a>
+            <p>HTML CSS and Javascript practice website</p>
+            <p>A website for me to practice implementing various APIs</p>
+          </div>
           <div className="card">
             <img src={TestStore} alt="ch-test-store.netlify.app"/>
             <a href="http://ch-test-store.netlify.com" target="_blank" rel="noopener noreferrer" className="stretched-link">

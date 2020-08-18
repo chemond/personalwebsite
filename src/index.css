@@ -359,6 +359,10 @@ button {
   text-decoration: none;
 }
 
+.card img {
+  max-height: 200px;
+}
+
 /* End of Projects */
 /* Footer */
 .page-footer {
