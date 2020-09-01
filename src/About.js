@@ -34,7 +34,7 @@ class About extends Component {
             </a>
           </div>
           <div className="logo col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-            <a href='https://github.com/chemond' target='_blank' rel="noopener noreferrer">
+            <a href='https://github.com/colbyhemond' target='_blank' rel="noopener noreferrer">
               <img id="img-github" src={githublogo} alt="GitHub Logo"/>
             </a>
           </div>
